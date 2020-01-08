@@ -420,8 +420,6 @@ fz_authenticate_password(fz_context *ctx, fz_document *doc, const char *password
 int
 fz_has_permission(fz_context *ctx, fz_document *doc, fz_permission p)
 {
-	if (doc && doc->has_permission)
-		return doc->has_permission(ctx, doc, p);
 	return 1;
 }
 
